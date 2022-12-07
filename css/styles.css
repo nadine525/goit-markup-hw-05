@@ -132,13 +132,9 @@ img {
     color: var(--accent-color);
 }
 
-.nav-link.current::after {
-    position: absolute;
+.nav-link::after {
     display: block;
-    bottom: 0;
-    right: 0;
-    content: "";
-
+    content: '';
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
