@@ -3,8 +3,7 @@ html {
 }
 
 *,
-*::before
-*::after {
+*::before *::after {
     box-sizing: inherit;
 }
 
@@ -13,8 +12,8 @@ html {
     --title-text-color: #212121;
     --accent-color: #2196F3;
     --background-color: #ffffff;
-    --simple-white-text-color:#FFFFFF;
-    --background-color-exception:#2196F3;
+    --simple-white-text-color: #FFFFFF;
+    --background-color-exception: #2196F3;
     --simple-black-text-color: #000000;
     --rare-background-color: #F5F4FA;
     --background-hero-color: #2F303A;
@@ -30,14 +29,14 @@ html {
     --border-color-header: #ECECEC;
 }
 
-/* визначення основних кольорів тексту та фону */ 
+/* визначення основних кольорів тексту та фону */
 body {
-  margin: 0;
+    margin: 0;
 
-  background-color: var(--background-color);
-  color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
 }
 
 /*прибирання зазору у картинок знизу*/
@@ -59,13 +58,14 @@ img {
 ::after {
     box-sizing: border-box;
 }
+
 /*оформлення хедеру*/
 .container-header {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
 
     display: flex;
     align-items: center;
@@ -80,6 +80,7 @@ img {
 .site-nav {
     display: flex;
 }
+
 /* оформлення логотипу */
 .logo {
     display: inline-block;
@@ -173,14 +174,14 @@ img {
     color: var(--primary-text-color);
 
     padding-top: 32px;
-    padding-bottom: 32px; 
+    padding-bottom: 32px;
 
     text-decoration-line: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -200,9 +201,9 @@ img {
     max-width: 1600px;
     background-color: #C4C4C4;
     background-image: linear-gradient(to right,
-     rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0.4)),
-    url('../images/hero-banner.jpg');
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url('../images/hero-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -237,8 +238,10 @@ img {
     line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .button:hover,
 .button:focus {
     background-color: var(--button-hover-color);
@@ -275,6 +278,7 @@ img {
     line-height: 1.16;
     text-align: center;
 }
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -327,11 +331,13 @@ img {
     line-height: 1.14;
     text-transform: uppercase;
 }
+
 .description {
     margin: 0;
     font-size: 14px;
     line-height: 1.71;
 }
+
 /* оформлення прикладів робіт */
 .work {
     display: flex;
@@ -346,7 +352,7 @@ img {
     margin-right: 0;
 }
 
-/* оформлення та позіціонування лейблів */ 
+/* оформлення та позіціонування лейблів */
 .label {
     position: absolute;
     width: 100%;
@@ -374,6 +380,7 @@ img {
 
     background-color: var(--rare-background-color);
 }
+
 .team {
     display: flex;
 }
@@ -417,10 +424,10 @@ img {
 
 .team-position {
     margin: 0;
-    margin-top: 10px;   
+    margin-top: 10px;
     color: var(--primary-text-color);
     font-size: 16px;
-    line-height: 1.18; 
+    line-height: 1.18;
 }
 
 .social {
@@ -450,6 +457,8 @@ img {
     height: 100%;
     border-radius: 50%;
     background-color: var(--simple-white-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network:hover,
@@ -459,6 +468,7 @@ img {
 
 .social-icon {
     fill: #AFB1B8;
+
 }
 
 .network:hover .social-icon,
@@ -492,6 +502,7 @@ img {
     color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -538,6 +549,7 @@ img {
 .address {
     margin-top: 28px;
 }
+
 .address-list-beaute {
     margin-bottom: 12px;
 }
@@ -549,21 +561,24 @@ img {
 .address-supercription {
     color: var(--simple-white-text-color);
     text-decoration-line: none;
-    font-style: normal;  
+    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-supercription:hover,
 .address-supercription:focus {
     color: var(--accent-color);
 }
+
 .address-mail {
     color: var(--footer-mail-tel-color);
     text-decoration-line: none;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-mail:hover,
@@ -578,6 +593,7 @@ img {
     font-size: 14px;
     line-height: 1.71;
     color: var (--footer-mail-tel-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-tel:hover,
@@ -617,8 +633,8 @@ img {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--simple-white-text-color); */
     background-color: rgba(255, 255, 255, 0.1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-network:hover,
@@ -639,7 +655,7 @@ img {
 
 /* оформлення Портфоліо */
 
-.header-for-portfolio {        
+.header-for-portfolio {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -678,13 +694,16 @@ img {
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
 .filter-button:focus {
     background-color: var(--accent-color);
     color: var(--simple-white-text-color);
-    box-shadow:  0px 3px 1px rgba(0, 0, 0, 0.1),
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -725,11 +744,8 @@ img {
     color: var(--simple-white-text-color);
     background: rgba(33, 150, 243, .9);
     margin: 0;
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
     overflow: auto;
+
 }
 
 .item-contetn {
@@ -747,13 +763,14 @@ img {
     flex-direction: column;
     text-decoration: none;
     height: 100%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-link:hover .overlay-description,
@@ -761,7 +778,7 @@ img {
     transform: translatex(0);
 }
 
- .portfolio-caption {  
+.portfolio-caption {
     margin: 0;
     color: var(--title-text-color);
     font-weight: 700;
